@@ -2,12 +2,16 @@ import { describe, expect, test, it } from "vitest";
 
 import { add } from "./add";
 
-describe("add", () => {
-  test("2 + 2 = 4", () => {
-    expect(add(2, 2)).toBe(4);
+function check(a: number, b: number, result: number) {
+  test(`${a} + ${b} = ${result}`, () => {
+    expect(add(a, b)).toBe(result);
   });
+}
 
-  it("should add 1 and 3 into 4", () => {
-    expect(add(1, 3)).toBe(4);
-  });
+describe("add", () => {
+  check(2, 2, 4);
+  check(1, 3, 4);
+  check(5, 3, 8);
+  check(27, -3, 24);
+  check(3, 2, 5);
 });
