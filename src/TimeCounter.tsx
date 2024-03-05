@@ -10,7 +10,7 @@ function formatDiff(emergencyStart: dayjs.Dayjs) {
   const duration = dayjs.duration(diff);
   const hours = duration.as("hours");
   return (
-    (hours >= 1 ? hours.toFixed() + ":" : "") +
+    (hours >= 1 ? Math.floor(hours).toString() + ":" : "") +
     duration.format("mm:ss")
   );
 }
