@@ -1,13 +1,25 @@
 {
   "scripts": {
+    "dev": "vite",
     "test": "vitest",
     "test:ui": "vitest --ui"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@types/react": "^18.2.63",
+    "@vitejs/plugin-react": "^4.2.1",
     "@vitest/ui": "^1.3.1",
     "fast-check": "^3.16.0",
+    "jsdom": "^24.0.0",
     "typescript": "^5.3.3",
+    "vite": "^5.1.5",
     "vitest": "^1.3.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }

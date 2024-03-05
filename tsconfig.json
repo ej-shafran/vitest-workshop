@@ -4,7 +4,7 @@
   "_version": "20.1.0",
 
   "compilerOptions": {
-    "lib": ["es2023"],
+    "lib": ["es2023", "dom"],
     "module": "node16",
     "target": "es2022",
 
@@ -12,6 +12,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+    "jsx": "preserve",
+    "types": ["@testing-library/jest-dom"]
   }
 }
