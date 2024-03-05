@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, test } from "vitest";
 
 import { add } from "./add";
 
@@ -12,6 +12,13 @@ describe("add", () => {
       const a = randomInt();
       const b = randomInt();
       expect(add(a, b)).toBe(add(b, a));
+    }
+  });
+
+  test("adding 1 twice is the same as adding 2", () => {
+    for (let i = 0; i < 100; i++) {
+      const a = randomInt()
+      expect(add(add(a, 1), 1)).toBe(add(a, 2));
     }
   });
 });
