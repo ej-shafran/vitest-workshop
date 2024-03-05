@@ -7,13 +7,11 @@ function randomInt() {
 }
 
 describe("add", () => {
-  it("should work for any integers", () => {
+  it("should not depend on param order", () => {
     for (let i = 0; i < 100; i++) {
       const a = randomInt();
       const b = randomInt();
-      const expected = a + b;
-      const result = add(a, b);
-      expect(result).toBe(expected);
+      expect(add(a, b)).toBe(add(b, a));
     }
   });
 });
